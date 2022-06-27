@@ -54,6 +54,7 @@ table {
 html {
     max-width: 1920px;
     min-width: 428px;
+    width: 100%;
     font-size: 62.5%;
 }
 
@@ -63,6 +64,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, i {
+    color: rgb(225, 239, 230);
     text-decoration: none;
 }
 
@@ -86,7 +88,27 @@ p, a {
     font-size: 3rem;
 }
 
+body {
+    margin: auto;
+    padding: 0 5rem;
+    width: 100%;
+    height: auto;
+    background: rgb(0, 4, 17);
+}
+
 /* header section */
+
+.bar {
+	margin: 0;
+	top: 0;
+	height: 25rem;
+	width: 100%;
+	background-color: rgb(0, 4, 17, .8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 header {
     width: 100%;
     height: 100vh;
@@ -94,6 +116,28 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.headerLinks {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+
+.social {
+    width: 25%;
+    display: flex;
+    justify-content: space-around; 
 }
 
 /* spacer */
@@ -111,6 +155,8 @@ header {
 /* menu */
 
 .menu {
+    display: flex;
+    flex-flow: row wrap;
     width: 100%;
     height: auto;
     background-image: url('../img/staff-bartender.jpg');
@@ -118,6 +164,43 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 2%;
+    background-color: black;
+    opacity: 70%;
+}
+
+.menu h2 {
+    width: 100%;
+    text-align: center;
+}
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: 2% 10%;
+}
+.menu-section h3 {
+    width: 100%;
+}
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2%;
+}
+.menu-item p {
+    width: 90%;
+}
+.price {
+    text-align: end;
 }
 
 /* footer section */
@@ -128,8 +211,73 @@ footer {
     font-size: 3rem;
 }
 
+.footerContainer {
+	margin: 0;
+    padding: 1rem 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(0, 4, 17, .8);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.signUp {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    width: 100;
+    height: 50%;
+}
+
+input {
+    width: 75%;
+}
+
+.button-1 {
+    width: 25%;
+}
+
+nav {
+    width: 100%; 
+}
+
+nav .navContainer {
+    width: 100%;
+}
+
+nav .footerLinks {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.copyrightText {
+    padding-right: 10rem;
+    text-align: right;
+    font-size: 2rem;
+    color: white;
+}
+
 /* mobile media query */
 @media (max-width: 428px) {
+
+
+    body {
+        height: auto;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
     /* header section */
     .header-title {
         width: 75%;
@@ -138,15 +286,141 @@ footer {
         font-size: 4rem;
     }
 
+    .bar {
+        padding-top: 1rem;
+        justify-content: space-between;
+        height: 48%;
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 5.5rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headerLinks {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        height: 100%;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    a {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 3rem;
+    }
+
+    .social {
+        width: 40%;
+        height: 40%;
+        align-items: center;
+    }
+
+
     /* menu */
+
     .menu {
         background-image: none;
+        background-color: white;
+    }
+
+    .container {
+        background-color: white;
+        opacity: none;
+    }
+
+    .menu h2,h3,h4,p {
+        color: black;
+    }
+    .container h2 {
+        text-decoration: underline;
+        text-decoration-thickness: 10px;
+        text-underline-offset: 20%;
+    }
+    .menu-section {
+        width: 50%;
+        margin-top: 10%;
+        justify-content: center;
+    }
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 5% 0;
+        border-bottom: solid 5px black;
+    }
+    .menu-item:last-child {
+        border-bottom: 0;
+    }
+.menu-section h4 {
+    font-size: 4rem;
+}
+
+    .menu-section h3 {
+        text-align: center;
+        border: solid 5px black;
+        width: auto;
+        padding: 1% 10%;
     }
 
     /* footer section */
     footer {
-        height: auto;
-        padding-top: 2.5vh;
+        padding: 0;
+        height: 100%;
+    }
+    footer .footerContainer {
         font-size: 2rem;
+        flex-direction: column;
+    }
+
+    footer h4 {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .button {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 5rem;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .button-1 {
+        width: 90%;
+    }
+
+    .signUp {
+        width: 100%;
+        height: 100%;  
+    }
+
+    .footerLinks {
+     flex-direction: column;
+     align-items: center;
+    }
+
+    .copyrightText {
+        padding: 0 20%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
     }
 }
